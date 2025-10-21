@@ -7,7 +7,7 @@ import { ConfigModule } from '@nestjs/config';
 
 
 @Module({
-  imports: [StringanalyzerModule,MongooseModule.forRoot(process.env.MONGO_URI || 'mongodb://localhost:27017/mydb'), ConfigModule.forRoot({
+  imports: [StringanalyzerModule,MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost:27017/mydb'), ConfigModule.forRoot({
       isGlobal: true,
     }),],
   controllers: [],
